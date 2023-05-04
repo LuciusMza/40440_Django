@@ -10,5 +10,5 @@ pygsheets.egg-info/
 media/*
 
 # Other
-.DS Store
+.DS_Store
 .coverage
