@@ -20,3 +20,12 @@ def saludar_a_usuario(request, nombre):
     texto = f"Hola {nombre}"
     pagina_html = HttpResponse(texto)
     return pagina_html
+
+def saludar_con_html(request):
+    contexto = {}
+    http_response = render(
+        request = request,
+        template_name = 'AppCoder/base.html',
+        context = contexto,
+    )
+    return http_response
