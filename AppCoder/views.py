@@ -16,3 +16,18 @@ def lista_estudiantes(request):
         context=contexto,
     )
     return http_response
+
+def lista_cursos(request):
+    contexto = {
+        "cursos": [
+            {"nombre":"Python", "comision":"40440"},
+            {"nombre":"Frontend", "comision":"1000"},
+            {"nombre":"Diseño", "comision":"1001"},
+        ]
+    }
+    http_response = render(
+        request=request,
+        template_name='AppCoder/lista_cursos.html',
+        context=contexto,
+    )
+    return http_response
